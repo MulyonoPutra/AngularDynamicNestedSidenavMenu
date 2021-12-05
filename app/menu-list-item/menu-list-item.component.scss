@@ -1,0 +1,41 @@
+@import '../theme';
+
+:host {
+  display: block;
+  outline: none;
+
+  .mat-list-item.active {
+    background-color: mat-color($app-primary, 50);
+  }
+  &:hover,
+  &:focus {
+    >.mat-list-item:not(.expanded) {
+      background-color: mat-color($app-primary, 100) !important;
+    }
+  }
+}
+
+.mat-list-item {
+  padding: 8px 0;
+
+  .routeIcon {
+    margin-right: 40px;
+  }
+}
+
+
+.arrow {  
+  
+      width:120px;
+      margin-right: -15px;
+}
+
+.point {
+    position: relative;    
+    width: 0;
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 30px solid mat-color($app-primary, 100) !important;
+     float:right;
+}
